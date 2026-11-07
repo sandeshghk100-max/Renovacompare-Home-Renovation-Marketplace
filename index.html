@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#173c35"><title>RenovaCompare — Renovation, made simpler</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="authScreen" class="auth-screen">
+  <div class="auth-visual"><div class="brand brand-light"><span class="brand-mark">R</span> renova<span>compare</span></div><div class="auth-copy"><p class="eyebrow">YOUR HOME. YOUR VISION.</p><h1>Build a home<br>you <em>love coming</em><br>back to.</h1><p>Meet trusted renovation professionals, compare transparent quotes, and make confident decisions.</p><div class="auth-proof"><span>✓ Verified-style profiles</span><span>✓ Side-by-side proposals</span><span>✓ One simple workspace</span></div></div><div class="auth-bottom">A better way to renovate.</div></div>
+  <div class="auth-panel"><div class="auth-mobile-brand brand"><span class="brand-mark">R</span> renova<span>compare</span></div><div class="auth-box"><p class="eyebrow">WELCOME TO RENOVACOMPARE</p><h2 id="authTitle">Welcome back</h2><p class="muted" id="authSubtitle">Sign in to manage your renovation journey.</p>
+    <form id="authForm"><label>Full name <input id="authName" placeholder="Your name" autocomplete="name" class="hidden"></label><label>Email address <input id="authEmail" type="email" placeholder="you@example.com" required></label><label>Password <input id="authPassword" type="password" placeholder="Enter your password" required minlength="4"></label><button class="btn btn-primary full" id="authSubmit">Sign in <span>→</span></button></form>
+    <p class="auth-switch" id="authSwitch">New to RenovaCompare? <button type="button" class="text-btn" id="toggleAuth">Create an account</button></p><div class="or"><span>OR</span></div><button class="btn btn-outline full" id="guestBtn">Continue as Guest <span>→</span></button><p class="tiny center">Guest mode uses this browser's local demo data. No account needed.</p>
+  </div><p class="tiny auth-legal">By continuing, you agree to our Terms of Service and Privacy Policy.</p></div>
+</div>
+<div id="app" class="app hidden">
+<aside class="sidebar"><div class="brand"><span class="brand-mark">R</span> renova<span>compare</span></div><div class="workspace-label">WORKSPACE</div><nav><button class="nav-item active" data-page="overview"><span>▦</span> Overview</button><button class="nav-item" data-page="projects"><span>⌂</span> My projects <b id="projectNavCount">2</b></button><button class="nav-item" data-page="contractors"><span>♧</span> Find contractors</button><button class="nav-item" data-page="proposals"><span>▤</span> Compare proposals <b class="nav-dot" id="proposalNavDot"></b></button></nav><div class="sidebar-bottom"><div class="help-card"><div class="help-icon">✦</div><strong>Need a hand?</strong><p>Our renovation guide can help you get started.</p><button id="guideBtn">Explore guide →</button></div><button class="profile-mini" id="profileBtn"><span class="avatar" id="sideAvatar">G</span><span><strong id="sideName">Guest User</strong><small id="sideRole">Homeowner account</small></span><span class="dots">•••</span></button></div></aside>
+<main class="main"><header class="topbar"><div><span class="crumb">Workspace</span><span class="crumb-sep">/</span><strong id="pageCrumb">Overview</strong></div><div class="top-actions"><span class="demo-pill"><i></i> Demo workspace</span><button class="icon-btn" id="notifBtn" aria-label="Notifications">♧<i></i></button><button class="avatar top-avatar" id="topAvatar">G</button></div></header>
+<div class="content" id="pageContent"></div>
+</main></div>
+<div class="toast" id="toast"></div>
+<div class="modal-backdrop hidden" id="modalBackdrop"><div class="modal" id="modal"><button class="modal-close" id="modalClose">×</button><div id="modalContent"></div></div></div>
+<script src="app.js"></script>
+</body></html>
