@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Contractors | RENOHUB</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="contractors.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">RENOHUB</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="contractors.html" class="active">Find Contractors (M1)</a></li>
+      <li><a href="../member2/quotes.html">Quote &amp; Booking (M2)</a></li>
+      <li><a href="../member3/portal.html">Contractor Portal (M3)</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="filter-bar">
+      <input type="text" id="searchInput" placeholder="Search contractor or city...">
+      <select id="specialtyFilter">
+        <option value="All">All Specialties</option>
+        <option value="Modular Kitchen">Modular Kitchen</option>
+        <option value="Bathroom &amp; Plumbing">Bathroom &amp; Plumbing</option>
+        <option value="Painting &amp; Flooring">Painting &amp; Flooring</option>
+        <option value="Full Home Remodel">Full Home Remodel</option>
+      </select>
+    </div>
+
+    <div id="contractorGrid" class="contractor-grid"></div>
+  </div>
+
+  <script src="../app.js"></script>
+  <script src="contractors.js"></script>
+</body>
+</html>

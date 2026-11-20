@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quote &amp; Booking | RENOHUB</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="quotes.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">RENOHUB</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../member1/contractors.html">Find Contractors (M1)</a></li>
+      <li><a href="quotes.html" class="active">Quote &amp; Booking (M2)</a></li>
+      <li><a href="../member3/portal.html">Contractor Portal (M3)</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="selector-row">
+      <label for="contractorSwitcher">Select Contractor: </label>
+      <select id="contractorSwitcher"></select>
+    </div>
+
+    <div class="quote-layout">
+      <div class="contractor-info card">
+        <img id="contractorImage" src="" alt="Contractor Work">
+        <span id="contractorSpecialty" class="badge"></span>
+        <h2 id="contractorName"></h2>
+        <p id="contractorCity" class="city-text"></p>
+        <p class="rate-box">Rate: <span id="contractorRate"></span> / sq. ft.</p>
+      </div>
+
+      <div class="quote-panel card">
+        <h3>Estimate Cost &amp; Book Consultation</h3>
+        <form id="quoteForm">
+          <input type="text" id="clientName" placeholder="Your Full Name" required>
+          <input type="number" id="areaSqFt" placeholder="Renovation Area (sq. ft.)" min="10" required>
+          <p class="estimate-preview">Estimated Cost: <span id="liveEstimate">₹0</span></p>
+          <button type="submit" class="btn primary">Confirm Booking Request</button>
+        </form>
+        <p id="quoteMessage" class="message"></p>
+
+        <h4>Booked Inquiries</h4>
+        <ul id="inquiryList" class="inquiry-list"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="../app.js"></script>
+  <script src="quotes.js"></script>
+</body>
+</html>

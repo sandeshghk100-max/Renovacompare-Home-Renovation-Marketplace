@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contractor Portal | RENOHUB</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="portal.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">RENOHUB</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../member1/contractors.html">Find Contractors (M1)</a></li>
+      <li><a href="../member2/quotes.html">Quote &amp; Booking (M2)</a></li>
+      <li><a href="portal.html" class="active">Contractor Portal (M3)</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="stats-grid">
+      <div class="card stat-card">
+        <h4>Listed Contractors</h4>
+        <p id="totalContractors">0</p>
+      </div>
+      <div class="card stat-card">
+        <h4>Total Booking Value</h4>
+        <p id="totalBookingsValue">₹0</p>
+      </div>
+    </div>
+
+    <div class="portal-layout">
+      <div class="card">
+        <h3>Add Contractor Profile</h3>
+        <form id="addContractorForm">
+          <input type="text" id="name" placeholder="Contractor / Firm Name" required>
+          <select id="specialty" required>
+            <option value="Modular Kitchen">Modular Kitchen</option>
+            <option value="Bathroom &amp; Plumbing">Bathroom &amp; Plumbing</option>
+            <option value="Painting &amp; Flooring">Painting &amp; Flooring</option>
+            <option value="Full Home Remodel">Full Home Remodel</option>
+          </select>
+          <input type="text" id="city" placeholder="City (e.g., Hyderabad)" required>
+          <input type="number" id="ratePerSqFt" placeholder="Rate per sq. ft. (₹)" min="100" required>
+          <input type="url" id="imageUrl" placeholder="Portfolio Image URL (optional)">
+          <button type="submit" class="btn primary">Publish Profile</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>Manage Contractors</h3>
+        <table class="portal-table">
+          <thead>
+            <tr>
+              <th>Contractor</th>
+              <th>City</th>
+              <th>Rate/sq.ft.</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="portalBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="../app.js"></script>
+  <script src="portal.js"></script>
+</body>
+</html>
